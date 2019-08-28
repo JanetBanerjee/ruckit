@@ -82,6 +82,9 @@ test:
 #
 production:
   <<: *default
-  database: ruckit_production
-  username: ruckit
-  password: <%= ENV['RUCKIT_DATABASE_PASSWORD'] %>
+  encoding: utf8
+  database: djdpjheub4mrg
+  username: ihyviqedvhqtlo
+  password: 44438ebec98993d809e0591981636a1b0e2b63b8fc81bf328e4e7d2747632b56
+  host: ec2-174-129-242-183.compute-1.amazonaws.com
+  port: 5432
