@@ -1,3 +1,26 @@
-<h2> Edit </h2>
+<div class="container-flex">
+  <div class="row fix-edit-header">
+    <h1 class="text-center">
+      Edit <%= @fixture.club_name %>
+    </h1>
+    <div class="col-md-2 col-md-offset-1">
+      <div class="col-md-12">
+        <%= image_tag(@fixture.image.url, {:style => "width:150px;"}) %>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="col-md-12">
+        <h1 class="edit-name"><b>
+          <%= current_user.username %>
+        </b>
+        </h1>
+        <h2>
+          <%= current_user.first_name %> <%= current_user.second_name %>
+        </h2>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= render ('fixtures/partials/form') %>

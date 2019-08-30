@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_164333) do
+ActiveRecord::Schema.define(version: 2019_08_28_183317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 2019_08_19_164333) do
     t.string "club_info"
     t.string "address"
     t.string "city"
-    t.string "providence"
-    t.string "country"
+    t.string "province"
+    t.string "county"
     t.string "club_email"
     t.string "club_phone"
     t.string "age"

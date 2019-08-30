@@ -27,6 +27,10 @@ class FixturesController < ApplicationController
   def show
     @fixture = Fixture.find(params[:id])
   end
+
+  def edit
+    @fixture = Fixture.find(params[:id])
+  end
   
   def update
     if @fixture.update(params.required(:fixture).permit(

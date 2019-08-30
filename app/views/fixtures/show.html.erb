@@ -1,1 +1,33 @@
-<%= @fixture.inspect %>
+
+<div class="container-flex show-cont">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <div class="col-md-12 show-image">
+        <%= image_tag(@fixture.image.url, {:style => "width:350px;"}) %>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="col-md-12 show-description">
+        <h1 class="show-header"><b>
+          <%= @fixture.club_name %>
+        </b></h1>
+        <h4><b>
+          <%= @fixture.province %> - <%= @fixture.county %>
+        </b></h4>
+        <p>
+          <%= @fixture.club_info %>
+        </p>
+        <div class="col-md-2">
+          <h3 class="show-btn-area"><b>
+            <%= link_to "Back", root_path, :class => "back-btn"%>
+          </b></h3>
+        </div>
+        <div class="col-md-2 col-md-offset-6">
+          <h3 class="show-btn-area"><b>
+            <%= link_to "CHALLENGE", root_path, :class => "challenge-btn"%>
+          </b></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

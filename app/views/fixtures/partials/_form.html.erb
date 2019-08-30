@@ -1,20 +1,46 @@
-<%= bootstrap_form_for(@fixture, html: { class: 'form-inline' }) do |f| %>
-  <%= f.text_field :club_name %>
-  <%= f.text_field :address %>
-  <%= f.text_field :city %>
-  <%= f.text_field :providence %>
-  <%= f.text_field :country %>
+<%= bootstrap_form_for(@fixture) do |f| %>
+<div class="container-flex">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-1">
+      <div class="col-md-12 form-box">
+        <h2 class="form-heading">
+          CLUB DETAILS
+        </h2>
+        <%= f.text_field :club_name %>
 
-  <%= f.text_field :age %>
 
-  <%= f.text_field :club_email %>
-  <%= f.text_field :club_twitter %>
-  <%= f.text_field :club_website %>
+        <%= f.text_area :club_info  %>
+        <%= f.file_field :image %>
 
-  <%= f.text_area :club_info  %>
-  <%= f.file_field :image %>
+        <%= f.select :age, [["Under 7"], ["Under 8"], ["Under 9"], ["Under 10"], ["Under 11"], ["Under 12"], ["Under 13"], ["Under 14"], ["Under 15"], ["Under 16"], ["Under 17"], ["Under 18"], ["Under 18.5"], ["Junior Team"], ["Senior Team"]] %>
 
-  <button type="submit" class="btn btn-primary">
-    Submit
-  </button>
+        <%= f.text_field :club_email %>
+        <%= f.text_field :club_twitter %>
+        <%= f.text_field :club_website %>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="col-md-12 form-box">
+        <h2 class="form-heading">
+          CLUB CONTACT INFORMATION
+        </h2>
+        <%= f.text_field :address %>
+        <%= f.text_field :city %>
+        <%= f.text_field :club_phone %>
+        <%= f.select :county, [["Antrim"], ["Armagh"], ["Carlow"], ["Cavan"], ["Clare"], ["Cork"], ["Derry"], ["Donegal"], ["Down"], ["Dublin"], ["Fermanagh"], ["Galaway"], ["Kerry"], ["Kildare"], ["Kilkenny"], ["Laois"], ["Leitrim"], ["Limerick"], ["Longford"], ["Louth"], ["Mayo"], ["Meath"], ["Monaghan"], ["Offaly"], ["Roscommon"], ["Silgo"], ["Tipperary"], ["Tyrone"], ["Waterford"], ["Westmeath"], ["Wexford"], ["Wicklow"]] %>
+        <%= f.select :province, [["Munster"], ["Ulster"], ["Leinster"], ["Connacht"]] %>
+
+        <button type="submit" class="btn btn-primary form-btn">
+          Submit
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <div class="row text-center form-btn-row">
+
+
+
+  </div>
+</div>
 <% end %>

@@ -97,11 +97,332 @@
   border-top:#e8491d 3px solid;
 }
 
+.vero_widget {
+  padding-top: 40px;
+}
+
+.foot-info {
+  margin-right: 90px;
+}
+
+.foot-info-link {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: solid grey 2px;
+}
+
+.foot-copy {
+  background-color: #e8491d;
+  border: solid grey 2px;
+}
+
+.foot-social {
+  border: solid grey 1px;
+}
+
+//sign-up
+
+.sign-up-heading {
+  padding-bottom: 20px;
+  color: #e8491d;
+}
+
+.sign-up {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.sign-up-box {
+  border: solid grey 2px;
+  background-color: white;
+  padding:  0px 20px 40px 20px;
+}
+
+.sign-up-img {
+  margin-top: 80px;
+}
+
+.sign-up-img-box {
+  border: solid grey 2px;
+  background-color: white;
+  padding-top: 150px;
+  padding-bottom: 490px;
+}
+
+//edit
+.edit-box {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.edit-form {
+  padding: 0px 20px 30px 20px;
+  background-color: white;
+  border: solid grey 2px;
+}
+
+.edit-heading {
+  color: #e8491d;
+}
+
+.edit-img {
+  border: solid grey 2px;
+  background-color: white;
+  padding-top: 150px;
+  padding-bottom: 437px;
+}
 //index
 
+//show
 
+.show-cont {
+  padding-top: 100px;
+}
 
+.show-header {
+  color: #e8491d;
+  border-bottom: solid #e8491d 2px;
+  padding-bottom: 10px;
+}
 
+.show-description {
+  padding-left: 40px;
+}
+
+.show-image {
+  padding-bottom: 50px;
+}
+
+.back-btn {
+  background-color: deepskyblue;
+  border: none;
+  color: white;
+  padding: 7px 32px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.challenge-btn {
+  background-color: #e8491d;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+//edit fixture
+.fix-edit-header {
+  background-color: #35424a;;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  border-bottom: solid #e8491d 2px;
+  border-top: solid #e8491d 2px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+//form
+.form-heading {
+  color: #e8491d;
+  padding-bottom: 25px;
+}
+
+.form-box {
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  border: solid grey 2px;
+  margin-bottom: 50px;
+}
+
+.form-btn {
+  background-color: #e8491d;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+//about
+
+.about-header {
+  background-image: image-url(image_path("site-hero3.jpg"));
+  background-size: 100% 100%;
+  border: solid;
+  padding-top: 275px;
+  padding-bottom: 450px;
+  border-bottom:#e8491d 3px solid;
+  color: white;
+
+}
+
+.about-title {
+  border: #e8491d 8px solid;
+  font-size: 500%;
+}
+
+.about-body {
+  background-color: #35424a;
+  color: white;
+  padding-left: 120px;
+}
+
+.body-header {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.about-p {
+  padding-right: 70px;
+  color: lightgrey;
+}
+
+.about-image {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-btn-area {
+  padding-top: 20px;
+}
+
+.about-btn{
+  background-color: #e8491d;
+  border: none;
+  color: white;
+  padding: 15px 50px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.about-works-header {
+  padding-top: 20px;
+}
+
+.about-tile {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.about-tiles {
+  padding-left: 170px;
+  padding-right: 170px;
+  padding-bottom: 40px;
+}
+
+.about-image-left {
+  background-image: image-url(image_path("site-hero5.jpg"));
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.about-image-right {
+  background-image: image-url(image_path("site-hero4.jpg"));
+  padding-top: 30px;
+  padding-bottom: 300px;
+}
+
+.about-image-text {
+  padding-left: 45px;
+  color: white;
+}
+
+.about-btn-join {
+  background-color: #e8491d;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.about-test-body {
+  background-color: white;
+}
+
+.about-test {
+  margin-top: 40px;
+  padding: 10px 10px 10px 10px;
+  border: solid grey 2px;
+  border-radius: 5px;
+}
+
+.about-test-pic {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+//contact
+
+.contact-header {
+  background-image: image-url(image_path("site-hero4.jpg"));
+  background-size: 100% 100%;
+  border: solid;
+  padding-top: 275px;
+  padding-bottom: 450px;
+  border-bottom:#e8491d 3px solid;
+  color: white;
+}
+
+.contact-tiles {
+  padding-left: 170px;
+  padding-right: 170px;
+  padding-bottom: 40px;
+  background-color: #35424a;
+  color: white;
+  border-bottom:#e8491d 3px solid;
+}
+
+.contact-map {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom:#e8491d 3px solid;
+}
+
+.contact-contact {
+  padding-top: 50px;
+  padding-left: 400px;
+  padding-bottom: 30px;
+}
+
+.contact-message {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.contact-btn {
+  background-color: #e8491d;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.contact-btn-area {
+  padding-top: 20px;
+}
 
 //from could9
 

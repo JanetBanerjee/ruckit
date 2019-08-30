@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class="nav-image">
-        <%= link_to image_tag("logo.thumb.png") %>
+        <%= link_to image_tag("logo.thumb.png"), root_path %>
       </div>
 
     </div>
@@ -18,8 +18,8 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav nav-links">
-        <li><%= link_to "About" %></li>
-        <li><%= link_to "Contact" %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
 
         <li><%= link_to "new", new_fixture_path %></li>
         <li><%= link_to "edit"%></li>
@@ -30,9 +30,14 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fixtures Account <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Manage Fixtures"  %></li>
+              <li>
+                <% @fixture = Fixture.where(:user_id => current_user.id) %>
+                <% @fixture.each do |f| %>
+                  <%= link_to f.club_name, edit_fixture_path(f) %>
+                <% end %>
+              </li>
               <li><%= link_to "Fixtures History" %></li>
-              <li><%= link_to "Create Fixture" %></li>
+              <li><%= link_to "Create Fixture", new_fixture_path %></li>
 
             </ul>
           </li>
@@ -41,8 +46,8 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.username %> <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><%= link_to "Fixture History" %></li>
-              <li><%= link_to "Edit Profile" %></li>
-              <li><%= link_to "Sign Out", method: :delete %></li>
+              <li><%= link_to('Edit Profile', edit_user_registration_path) %></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
             </ul>
           </li>
         <% else %>
