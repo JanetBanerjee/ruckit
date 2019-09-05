@@ -17,8 +17,8 @@
   background-image: image-url(image_path("site-hero-crop.jpg"));
   background-size: 100% 100%;
   border: solid;
-  padding-top: 95px;
-  padding-bottom: 210px;
+  padding-top: 105px;
+  padding-bottom: 220px;
   border-bottom:#e8491d 3px solid;
 }
 
@@ -210,6 +210,133 @@
   border: none;
   color: white;
   padding: 10px 32px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+//challenge
+
+.challege-show-box {
+  margin-bottom: 100px;
+  margin-top: 60px;
+ }
+
+.challenge-team-box {
+  margin-left: 70px;
+  padding-top: 40px;
+}
+
+.challenge-team-info-box {
+  padding-right: 100px;
+}
+
+.challenge-img {
+  padding-top: 30px;
+}
+
+.challenge-info-title {
+  color: #e8491d;
+}
+
+.challenge-list {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: solid grey 2px;
+}
+
+.challenge-info-box {
+  background-color: white;
+  margin-right: 70px;
+  padding: 30px 50px 50px 50px;
+  float: right;
+}
+
+.challenge-form {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+//challenge index
+
+.challenge-user {
+  margin-top: 50px;
+
+  background-color: #35424a;
+  color: white;
+  padding-bottom: 30px;
+  padding-top: 70px;
+  border-bottom:#e8491d 3px solid;
+  border-top:#e8491d 3px solid;
+}
+
+.table-head {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid darkgrey 3px;
+  border-top: solid darkgrey 3px;
+  margin-bottom: 15px;
+  background-color: lightgrey;
+}
+
+.table-box {
+  padding-top: 30px;
+  background-color: white;
+}
+
+.table-tile {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-top: solid lightgrey 1px;
+}
+
+.view-btn {
+  background-color: #35424a;
+  border: none;
+  color: white;
+  padding: 7px 22px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+//challenge response
+
+.edit-challenge-box {
+  padding: 80px 30px 30px 30px;
+}
+
+.response-header {
+  color: #e8491d;
+  padding-bottom: 10px;
+  border-bottom: solid darkgrey 3px;
+}
+
+.response-contact-box {
+  padding-left: 30px;
+}
+
+.decline-btn {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 7px 22px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.accept-btn {
+  background-color: limegreen;
+  border: none;
+  color: white;
+  padding: 7px 22px;
   tex-align: center;
   text-decoration: none;
   font-size: 16px;

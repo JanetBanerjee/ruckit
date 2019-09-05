@@ -1,0 +1,66 @@
+<div class="container-flex edit-challenge-box">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="col-md-12">
+        <%= image_tag("shield-304932_640.png", {:style => "width:250px;"})  %>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="col-md-12">
+        <div class="row">
+          <h2 class="response-header">
+            <%= @challenger.club_name %> - <%= @challenger.age %> years
+          </h2>
+        </div>
+        <div class="row">
+          <h4><b>
+            <%= @challenger.county %>, <%= @challenger.province %>
+          </b></h4>
+        </div>
+        <div class="row">
+          <p>
+            <%= @details.message %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3">
+      <div class="col-md-12 response-contact-box">
+        <div class="row">
+          <h3 class="response-header">
+            Contact Details
+          </h3>
+        </div>
+        <div class="row">
+          <%= @details.phone_number %>
+        </div>
+        <div class="row">
+          <%= @details.email %>
+        </div>
+        <div class="row">
+          <%= @challenger.city %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-md-offset-2">
+      <%= bootstrap_form_for @challenge do |f| %>
+
+        <div class="response-message-box">
+          <%= f.text_area :response_message, label: "Message", help: "optional" %>
+        </div>
+
+        <%= f.submit 'Decline', class: "decline-btn" %>
+        <%= f.submit 'Accept', class: "accept-btn" %>
+
+        <% end %>
+    </div>
+  </div>
+  <div class="row back-btn-box">
+    <button type="submit" class="btn btn-primary back-btn">
+      Back
+    </button>
+  </div>
+</div>
+

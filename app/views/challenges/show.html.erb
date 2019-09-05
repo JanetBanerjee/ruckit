@@ -1,0 +1,71 @@
+<div class="container-flex">
+  <div class="row challege-show-box">
+    <div class="col-md-7">
+      <div class="col-md-12 challenge-team-box">
+        <div class="col-md-3 challenge-img">
+          <%= image_tag(@fixture.image.url, {:style => "width:180px;"}) %>
+        </div>
+        <div class="col-md-9">
+          <div class="col-md-12 challenge-team-info-box">
+            <h1 class="show-header"><b>
+              <%= @fixture.club_name %>
+            </b></h1>
+            <h4><b>
+              <%= @fixture.province %> - <%= @fixture.county %>
+            </b></h4>
+            <p>
+              <%= @fixture.club_info %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      <div class="col-md-12 challenge-info-box">
+        <div class="row">
+          <h3 class="challenge-info-title">YOUR TEAM'S DETAILS</h3>
+          <p class="challenge-list">
+            <%= @fixture.club_name %>
+          </p>
+          <p class="challenge-list">
+            <%= @fixture.county %>
+          </p>
+          <p class="challenge-list">
+            <%= @fixture.province %>
+          </p>
+          <p class="challenge-list">
+            <%= @fixture.age %>
+          </p>
+        </div>
+        <div class="row">
+          <h3 class="challenge-info-title">CONTACT INFORMATION</h3>
+          <p class="">
+            <%= bootstrap_form_for(@challenge) do |f| %>
+            <div class="challenge-form">
+              <%= f.text_field :full_name %>
+            </div>
+            <div class="challenge-form">
+              <%= f.select :club_name, Fixture.where(:user_id => current_user.id).pluck(:club_name)%>
+            </div>
+            <div class="challenge-form">
+              <%= f.text_field :email %>
+            </div>
+            <div class="challenge-form">
+              <%= f.text_area :message %>
+            </div>
+            <div class="challenge-form">
+              <%= f.text_field :phone_number, label: "Phone Number (Optional)"%>
+            </div>
+
+              <%= f.hidden_field :receiver_id, :value => @fixture.user_id %>
+
+              <button type="submit" class="btn btn-primary form-btn">
+                Challenge
+              </button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

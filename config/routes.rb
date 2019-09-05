@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   get "/about" => "static#about"
   get "/contact" => "static#contact"
+  get "/list" => "list#challenge"
 end

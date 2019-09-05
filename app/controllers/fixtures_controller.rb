@@ -1,4 +1,5 @@
 class FixturesController < ApplicationController
+  before_action :fixture_params, only: [:edit, :update]
   
   def index
     @fixture = Fixture.all
@@ -11,7 +12,7 @@ class FixturesController < ApplicationController
   def create
     @fixture = Fixture.new(params.required(:fixture).permit(
                                                         :club_name, :club_info, :address,
-                                                        :city, :providence, :country,
+                                                        :city, :province, :county,
                                                         :club_email, :club_twitter, :club_website,
                                                         :club_phone, :age, :club_facebook, :image))
 
@@ -35,7 +36,7 @@ class FixturesController < ApplicationController
   def update
     if @fixture.update(params.required(:fixture).permit(
         :club_name, :club_info, :address,
-        :city, :providence, :country,
+        :city, :province, :county,
         :club_email, :club_twitter, :club_website,
         :club_phone, :age, :club_facebook, :image
     ))
@@ -43,5 +44,11 @@ class FixturesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  private
+
+  def fixture_params
+    @fixture = Fixture.find(params[:id])
   end
 end

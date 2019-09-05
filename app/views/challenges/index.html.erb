@@ -1,0 +1,66 @@
+<div class="container-flex">
+  <div class="row challenge-user">
+    <div class="col-md-2 col-md-offset-1">
+      <div class="col-md-12 ">
+        <p> image plceholder </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="col-md-12">
+        <h3><b>
+          <%= @user.first_name %> <%= @user.second_name %>
+        </b></h3>
+        <p>
+          <%= @user.created_at.strftime("%B %d, %Y")%>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row table-box">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="row">
+        <h3><b>CHALLENGE REPLIES</b></h3>
+      </div>
+      <div class="row table-head">
+        <div class="col-md-12">
+          <div class="col-md-2 table-head-label">
+
+          </div>
+          <div class="col-md-2 table-head-label">
+            Club
+          </div>
+          <div class="col-md-4 table-head-label">
+            Message
+          </div>
+          <div class="col-md-2 table-head-label">
+            Status
+          </div>
+          <div class="col-md-2 table-head-label">
+
+          </div>
+        </div>
+      </div>
+      <% @challenge.each do |f| %>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-2 table-tile">
+              <%= f.challenger_id %>
+            </div>
+            <div class="col-md-2 table-tile">
+              <%= f.club_name %>
+            </div>
+            <div class="col-md-4 table-tile">
+              <%= f.message %>
+            </div>
+            <div class="col-md-2 table-tile">
+              <%= f.response %>
+            </div>
+            <div class="col-md-2 table-tile">
+              <%= link_to "View", edit_challenge_path(f), class: "view-btn" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

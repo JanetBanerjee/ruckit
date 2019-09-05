@@ -23,7 +23,7 @@
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/ruckit_production</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ec2-174-129-242-183.compute-1.amazonaws.com:5432/djdpjheub4mrg</jdbc-url>
     </data-source>
   </component>
 </project>

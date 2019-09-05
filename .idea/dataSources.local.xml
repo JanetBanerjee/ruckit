@@ -14,8 +14,12 @@
       <introspection-schemas>@:@</introspection-schemas>
     </data-source>
     <data-source name="Rails ruckit: production" uuid="c612ff47-85f0-46f2-a734-3b67eae84448">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
-      <user-name>ruckit</user-name>
+      <database-info product="PostgreSQL" version="11.5 (Ubuntu 11.5-1.pgdg16.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="11.5" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>ihyviqedvhqtlo</user-name>
+      <introspection-schemas>@:@</introspection-schemas>
     </data-source>
   </component>
 </project>
