@@ -23,9 +23,12 @@
           </b></h3>
         </div>
         <div class="col-md-2 col-md-offset-6">
-          <h3 class="show-btn-area"><b>
-            <%= link_to "CHALLENGE", challenge_path(@fixture), :class => "challenge-btn"%>
-          </b></h3>
+          <% if current_user.id == @fixture.user_id %>
+          <% else %>
+            <h3 class="show-btn-area"><b>
+              <%= link_to "CHALLENGE", challenge_path(@fixture), :class => "challenge-btn"%>
+            </b></h3>
+            <% end %>
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@
         <%= link_to "learn more", root_path, :class => "index-tile-btn"%>
       </p>
     </div>
-    <div class="col-md-5 text-center">
+    <div class="col-md-5">
       <h3>HOW IT WORKS?</h3>
       <p><b>IN JUST 3 EASY STEPS</b></p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum augue felis, blandit dignissim neque eget, euismod euismod risus. Donec lorem sem, imperdiet a elementum a, lacinia a nibh. Ut in metus scelerisque, efficitur nisi et, molestie nisi. Vivamus sit amet purus egestas, cursus nisi ac, convallis justo. Donec sed eleifend sapien, quis fringilla quam. </p>
@@ -51,14 +51,12 @@
                   <%= p.city%>, <%= p.county%>
                   </b>
                 </p>
-                <p class="fix-tile-btn-area text-center">
-                  <%= link_to "challenge", root_path, :class => "fix-tile-btn"%>
-                </p>
               </div>
             </div>
           <% end %>
         </div>
       <% end %>
+      <%= will_paginate @fixture %>
     </div>
   </div>
 </div>

@@ -1,7 +1,10 @@
 class ChallengesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @challenge = Challenge.where(receiver_id: current_user.id)
+
+    @challenger = Challenge.where(challenger_id: current_user.id)
 
     @fixture = Fixture.where(:user_id => current_user.id)
 
@@ -26,7 +29,7 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.new(params.required(:challenge).permit(
         :match_date, :challenger_id, :receiver_id,
         :full_name, :message, :phone_number, :response,
-        :response_message, :user_id, :club_name, :image))
+        :response_message, :user_id, :club_name, :image, :match_date))
 
     @challenge.challenger_id = current_user.id
 
@@ -52,7 +55,7 @@ class ChallengesController < ApplicationController
     if @challenge.update(params.required(:challenge).permit(
         :match_date, :challenger_id, :receiver_id,
         :full_name, :message, :phone_number, :response,
-        :response_message, :user_id
+        :response_message, :user_id, :match_date
     ))
 
       @challenge.update(response: "Accept") if accept?
@@ -74,6 +77,13 @@ class ChallengesController < ApplicationController
 
   def decline?
     params[:commit] == "Decline"
+  end
+
+  def authenticate_user
+    unless user.signed_in?
+      flash[:alert] = "You must sign in to view this page"
+      redirect_to(root_path)
+    end
   end
   
 end

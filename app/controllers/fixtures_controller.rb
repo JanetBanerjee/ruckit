@@ -1,8 +1,9 @@
 class FixturesController < ApplicationController
+  before_action :authenticate_user!
   before_action :fixture_params, only: [:edit, :update]
   
   def index
-    @fixture = Fixture.all
+    @fixture = Fixture.all.paginate(page: params[:page], per_page: 8)
   end
   
   def new
@@ -50,5 +51,12 @@ class FixturesController < ApplicationController
 
   def fixture_params
     @fixture = Fixture.find(params[:id])
+  end
+
+  def authenticate_user
+    unless user.signed_in?
+      flash[:alert] = "You must sign in to view this page"
+      redirect_to(root_path)
+    end
   end
 end

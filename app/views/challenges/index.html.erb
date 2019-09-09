@@ -19,18 +19,18 @@
   <div class="row table-box">
     <div class="col-md-10 col-md-offset-1">
       <div class="row">
-        <h3><b>CHALLENGE REPLIES</b></h3>
+        <h3><b>CHALLENGES RECIEVED</b></h3>
       </div>
-      <div class="row table-head">
+      <div class="row table-head text-center">
         <div class="col-md-12">
-          <div class="col-md-2 table-head-label">
-
-          </div>
           <div class="col-md-2 table-head-label">
             Club
           </div>
           <div class="col-md-4 table-head-label">
             Message
+          </div>
+          <div class="col-md-2 table-head-label">
+            Match Date
           </div>
           <div class="col-md-2 table-head-label">
             Status
@@ -44,19 +44,100 @@
         <div class="row">
           <div class="col-md-12">
             <div class="col-md-2 table-tile">
-              <%= f.challenger_id %>
-            </div>
-            <div class="col-md-2 table-tile">
               <%= f.club_name %>
             </div>
             <div class="col-md-4 table-tile">
-              <%= f.message %>
+              <%= truncate(f.message, length: 150) %>
             </div>
             <div class="col-md-2 table-tile">
-              <%= f.response %>
+              <%= f.match_date %>
             </div>
             <div class="col-md-2 table-tile">
-              <%= link_to "View", edit_challenge_path(f), class: "view-btn" %>
+              <div class="col-md-12 response-box text-center">
+                <% if f.response == "Accept" %>
+                  <p class="acc-btn-area">
+                    Accepted
+                  </p>
+                <% end %>
+                <% if f.response == "Decline" %>
+                  <p class="dec-btn-area">
+                    Declined
+                  </p>
+                <% end %>
+                <% if f.response == "Pending" %>
+                  <p class="pen-btn-area">
+                    Pending
+                  </p>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-2 table-tile view-btn-box">
+              <p class="view-btn-area">
+                <%= link_to "View", edit_challenge_path(f), class: "view-btn" %>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="row table-box bot-padding">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="row">
+        <h3><b>CHALLENGES GIVEN</b></h3>
+      </div>
+      <div class="row table-head text-center">
+        <div class="col-md-12">
+          <div class="col-md-2 col-md-offset-1 table-head-label">
+            Club
+          </div>
+          <div class="col-md-4 table-head-label">
+            Message
+          </div>
+          <div class="col-md-2 table-head-label">
+            Match Date
+          </div>
+          <div class="col-md-2 table-head-label">
+            Status
+          </div>
+          <div class="col-md-2 table-head-label">
+
+          </div>
+        </div>
+      </div>
+      <% @challenger.each do |f| %>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-2 col-md-offset-1 table-tile">
+              <%= f.club_name %>
+            </div>
+            <div class="col-md-4 table-tile">
+              <%= truncate(f.message, length: 150) %>
+            </div>
+            <div class="col-md-2 table-tile">
+              <%= f.match_date %>
+            </div>
+            <div class="col-md-2 table-tile text-center">
+              <div class="col-md-12">
+                <% if f.response == "Accept" %>
+                  <p class="acc-btn-area">
+                    Accepted
+                  </p>
+                <% end %>
+                <% if f.response == "Decline" %>
+                  <p class="dec-btn-area">
+                    Declined
+                  </p>
+                <% end %>
+                <% if f.response == "Pending" %>
+                  <p class="pen-btn-area">
+                    Pending
+                  </p>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-2 table-tile">
+
             </div>
           </div>
         </div>

@@ -9,6 +9,8 @@
 
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
 
+          <%= f.file_field :user_photo %>
+
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>

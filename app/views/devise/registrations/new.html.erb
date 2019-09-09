@@ -9,6 +9,11 @@
             <%= f.text_field :second_name %>
             <%= f.text_field :username %>
 
+          <%= f.label :user_photo do %>
+            <%= f.file_field :user_photo %>
+            <%= f.hidden_field :user_photo_cache %>
+            <% end %>
+
             <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
 
             <% if @minimum_password_length %>
@@ -29,7 +34,7 @@
     </div>
     <div class="col-md-5 sign-up-img">
       <div class="col-md-12 sign-up-img-box">
-
+        <%= image_tag "signup.png", style: "width: 540px"%>
       </div>
     </div>
   </div>

@@ -68,3 +68,5 @@ gem 'bootstrap_form'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'wice_grid'
+
+gem 'will_paginate'

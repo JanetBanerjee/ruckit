@@ -1,0 +1,42 @@
+<div class="contationer-flex">
+  <div class="row challenge-user">
+    <h1 class="fixture-header text-center"><b>
+      FIXTURES
+    </b>
+    </h1>
+  </div>
+  <div class="row fix-row">
+    <div class="col-md-10 col-md-offset-1">
+      <% @fixture.in_groups_of(4, false).each do |group| %>
+        <div class='row fix-row-2'>
+          <% group.each do |p| %>
+            <div class='col-md-3'>
+              <div class="col-md-12 fix-tile">
+                <p class="text-center">
+                  <% if p.image.url %>
+                    <%= image_tag(p.image.url, {:style => "width:150px;"}) %>
+                  <% end %>
+                </p>
+                <h3 class="text-center">
+                  <b>
+                    <%= link_to p.club_name, fixture_path(p) %>
+                  </b>
+                </h3>
+                <p class="text-center">
+                  <%= sanitize(truncate(p.club_info, length: 100)) %>
+                </p>
+                <p class="text-center">
+                  <b>
+                    <%= p.city%>, <%= p.county%>
+                  </b>
+                </p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      <%= will_paginate @fixture %>
+    </div>
+  </div>
+
+</div>

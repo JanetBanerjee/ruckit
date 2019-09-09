@@ -143,10 +143,7 @@
 }
 
 .sign-up-img-box {
-  border: solid grey 2px;
-  background-color: white;
-  padding-top: 150px;
-  padding-bottom: 490px;
+  padding-left: 50px;
 }
 
 //edit
@@ -166,12 +163,13 @@
 }
 
 .edit-img {
-  border: solid grey 2px;
-  background-color: white;
-  padding-top: 150px;
-  padding-bottom: 437px;
+
 }
-//index
+//fixture index
+
+.fixture-header {
+  font-size: 500%;
+}
 
 //show
 
@@ -301,7 +299,53 @@
   text-decoration: none;
   font-size: 16px;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 25px;
+}
+
+.view-btn-box {
+  padding-top: 15px;
+}
+
+.bot-padding {
+  padding-bottom: 100px;
+}
+
+.pen-btn-area {
+  background-color: deepskyblue;
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.acc-btn-area {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.dec-btn-area {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  tex-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+
+.response-box {
+  margin-right: 15px;
 }
 
 //challenge response
@@ -453,13 +497,13 @@
 }
 
 .about-image-left {
-  background-image: image-url(image_path("site-hero5.jpg"));
+  background-image: image-url(image_path("underage2.jpg"));
   padding-top: 30px;
   padding-bottom: 50px;
 }
 
 .about-image-right {
-  background-image: image-url(image_path("site-hero4.jpg"));
+  background-image: image-url(image_path("all-ireland-league2.jpg"));
   padding-top: 30px;
   padding-bottom: 300px;
 }
