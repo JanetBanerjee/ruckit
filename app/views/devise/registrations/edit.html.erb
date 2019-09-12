@@ -9,7 +9,14 @@
 
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
 
-          <%= f.file_field :user_photo %>
+          <% if current_user.user_photo.url.present? %>
+            <%= image_tag(current_user.user_photo.url) %>
+            <%= f.label :remove_avatar do %>
+              <%= f.check_box :remove_avatar %>
+            <% end %>
+          <% end %>
+          <%= f.file_field :avatar %>
+          <%= f.hidden_field :avatar_cache %>
 
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

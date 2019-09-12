@@ -70,3 +70,4 @@ gem 'mini_magick'
 gem 'wice_grid'
 
 gem 'will_paginate'
+gem 'ransack', github: 'activerecord-hackery/ransack'

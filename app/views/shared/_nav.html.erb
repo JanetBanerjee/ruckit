@@ -32,7 +32,7 @@
               <li>
                 <% @fixture = Fixture.where(:user_id => current_user.id) %>
                 <% @fixture.each do |f| %>
-                  <%= link_to f.club_name, edit_fixture_path(f) %>
+                  <%= link_to f.club, edit_fixture_path(f) %>
                 <% end %>
               </li>
               <li><%= link_to "Challenges", challenges_path %></li>

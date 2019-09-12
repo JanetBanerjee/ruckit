@@ -129,7 +129,7 @@
       <ObjectId>18613</ObjectId>
       <StateNumber>1487</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1570</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1576</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|18631|18633|1
@@ -260,7 +260,7 @@ sequence|table|18657|18659|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1571</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1577</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -532,10 +532,10 @@ sequence|table|18657|18659|1
       <DefaultExpression>nextval(&apos;fixtures_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="90" parent="62" name="club_name">
+    <column id="90" parent="62" name="club">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1493</StateNumber>
+      <StateNumber>1575</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="91" parent="62" name="club_info">

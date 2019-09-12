@@ -3,7 +3,10 @@ class FixturesController < ApplicationController
   before_action :fixture_params, only: [:edit, :update]
   
   def index
-    @fixture = Fixture.all.paginate(page: params[:page], per_page: 8)
+    @fixture = Fixture.all.paginate(page: params[:page], per_page: 16)
+
+    @search = Fixture.ransack(params[:q])
+    @results = @search.result.paginate(page: params[:page], per_page: 16)
   end
   
   def new

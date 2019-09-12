@@ -2,9 +2,20 @@
   <div class="row">
     <div class="header text-center">
       <%= image_tag "logo.1.png", style: "width: 400px"%>
-      <div class="col-md-6 col-md-offset-3 search-bar">
-        <h2>Searchbar Placeholder</h2>
+      <div class="col-md-6 col-md-offset-3 search-bar text-center">
+        <%= search_form_for @search do |f| %>
+          <%= f.label :club %>
+          <%= f.text_field :club_cont, class: "radius-left expand" %>
+          <%= f.label :age %>
+          <%= f.select :age_cont, [["Under 7"], ["Under 8"], ["Under 9"], ["Under 10"], ["Under 11"], ["Under 12"], ["Under 13"], ["Under 14"], ["Under 15"], ["Under 16"], ["Under 17"], ["Under 18"], ["Under 18.5"], ["Junior Team"], ["Senior Team"]], include_blank: true %>
+          <%= f.label :county %>
+          <%= f.select :county_cont, [["Antrim"], ["Armagh"], ["Carlow"], ["Cavan"], ["Clare"], ["Cork"], ["Derry"], ["Donegal"], ["Down"], ["Dublin"], ["Fermanagh"], ["Galaway"], ["Kerry"], ["Kildare"], ["Kilkenny"], ["Laois"], ["Leitrim"], ["Limerick"], ["Longford"], ["Louth"], ["Mayo"], ["Meath"], ["Monaghan"], ["Offaly"], ["Roscommon"], ["Silgo"], ["Tipperary"], ["Tyrone"], ["Waterford"], ["Westmeath"], ["Wexford"], ["Wicklow"]], include_blank: true %>
+          <%= f.label :province %>
+          <%= f.select :province_cont, [["Munster"], ["Ulster"], ["Leinster"], ["Connacht"]], include_blank: true %>
+          <%= f.submit "Search", class: "radius-right button search-btn" %>
+        <% end %>
       </div>
+    </div>
 
     </div>
   </div>
@@ -40,7 +51,7 @@
                 </p>
                 <h3 class="text-center">
                   <b>
-                    <%= link_to p.club_name, fixture_path(p) %>
+                    <%= link_to p.club, fixture_path(p) %>
                   </b>
                 </h3>
                 <p class="text-center">
