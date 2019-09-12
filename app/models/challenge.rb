@@ -3,5 +3,5 @@ class Challenge < ApplicationRecord
   belongs_to :fixture, optional: true;
 
   mount_uploader :image, ImageUploader
-  mount_uploader :user_photo, UserImageUploader
+  mount_uploader :avatar, AvatarUploader
 end
